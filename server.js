@@ -9,4 +9,4 @@ app.post("/answer", (req, res) => {
     const formatted = Number.isInteger(sum) ? sum : parseFloat(sum.toFixed(10));
     res.json({ output: `The sum is ${formatted}.` });
 });
-app.listen(3000, () => console.log("Running on port 3000"));
+app.listen(process.env.PORT || 3000, () => console.log("Running"));
